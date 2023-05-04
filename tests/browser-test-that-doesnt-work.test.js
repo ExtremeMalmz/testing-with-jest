@@ -34,7 +34,7 @@ test('Check if we can add 2 elements to the list', async () => {
 	await alert.sendKeys("ACDC");
     await alert.accept();
 
-	let stack = await driver.findElement(By.id('bottom_of_stack')).getText(); //oh no another problem
+	let stack = await driver.findElement(By.id('top_of_stack')).getText(); //oh no another problem
 	expect(stack).toEqual("ACDC");
 });
 
@@ -44,7 +44,7 @@ test("Check if we can delete something from the list", async () => {
 	await alert.accept();
 
 	let topOfStackButton = await driver.findElement(By.id('peek'));
-	//await topOfStackButton.click(); //oh no we dont click the top and so it doesnt refresh
+	await topOfStackButton.click();
 
 	let stack = await driver.findElement(By.id('top_of_stack')).getText(); 
 	expect(stack).toEqual("Metallica");
