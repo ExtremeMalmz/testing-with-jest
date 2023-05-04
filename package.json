@@ -10,5 +10,12 @@
     "test": "jest tests"
   },
   "author": "Eric Malmström",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "^1.13.6"
+  },
+  "devDependencies": {
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.0.2"
+  }
 }
